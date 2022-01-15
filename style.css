@@ -1,0 +1,332 @@
+html,
+body {
+  min-width: 346px;
+  background-image: url(Utilities/piggy-2889044_1920.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+
+#titleDiv {
+  display: flex;
+  flex-direction: row;
+  font-family: "Alfa Slab One";
+  font-size: 20px;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#titleDiv > img {
+  width: 110px;
+}
+
+/* header */
+#headerDiv {
+  position: sticky;
+  box-shadow: 6px 6px 5px rgb(155, 124, 124);
+  background-color: rgb(243, 239, 181);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 0;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+.searchDiv,
+.input-group {
+  padding: 0.3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.ui-autocomplete-input {
+  max-width: 300px;
+}
+
+#toggledCoins {
+  font-size: inherit;
+  text-align: center;
+}
+nav {
+  padding: 0.3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.navBtn {
+  margin-left: 10px;
+}
+#upperDiv {
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: larger;
+}
+#clearBtnDiv {
+  margin-top: 20px;
+}
+
+/*עיצוב הכרטיסים  */
+#cardDeck {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.cardContainer > .card {
+  width: 170px;
+  background-color: rgba(250, 210, 157, 0.6);
+  border-radius: 20px;
+  box-shadow: rgb(214, 204, 163) 6px 6px 5px;
+}
+.card-header {
+  padding: 4%;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1%;
+}
+.card-text {
+  min-height: 50px;
+  padding: 0px;
+  margin: 0px;
+}
+.moreInfoBtn {
+  margin-top: 5px;
+}
+.cardThrobber {
+  width: 57%;
+}
+
+.moreInfoImg {
+  height: 50px;
+  width: auto;
+  margin-bottom: 10px;
+}
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle.ios,
+.toggle-on.ios,
+.toggle-off.ios,
+.toggle-on,
+.toggle-off {
+  border-radius: 20rem;
+  font-size: 12px;
+}
+.toggle.ios .toggle-handle {
+  border-radius: 20rem;
+}
+
+.custom-switch {
+  width: 100%;
+  padding: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.toggle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 10px;
+}
+
+/* modal */
+.modal-content {
+  background-color: rgb(8, 8, 8);
+  background-image: url(Utilities/favpng_clip-art-piggy-bank-saving-money.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.modal-header {
+  height: fit-content;
+  justify-content: center;
+  background-color: rgba(243, 237, 183, 0.8);
+}
+
+.modalRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgba(243, 239, 204, 0.8);
+}
+
+.modalH5 {
+  width: 80%;
+}
+.modalInputDiv {
+  width: 20%;
+  justify-content: flex-end;
+}
+/* דוח */
+.canvasjs-chart-canvas {
+  border: solid black 1px;
+  box-shadow: rgb(247, 235, 190) 6px 6px 5px;
+}
+
+/* אודות */
+#aboutDiv {
+  height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: rgba(250, 210, 157, 0.6);
+  border-radius: 20px;
+  box-shadow: rgb(214, 204, 163) 6px 6px 5px;
+}
+
+#aboutContainer {
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#personalInfo {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#personalInfo > img {
+  width: 350px;
+  margin-bottom: 1rem;
+  border-radius: 25px;
+  margin: 20px;
+}
+
+#aboutText {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#aboutText > .card {
+  background-color: rgba(248, 233, 233, 0.863);
+  margin: 10px;
+  width: 100%;
+}
+
+#aboutText > .card > .card-header {
+  height: fit-content;
+  padding-bottom: 5px;
+  text-align: center;
+}
+#languages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  grid-template-columns: repeat(fit-content, 1fr);
+  text-align: start;
+}
+
+#aboutMe {
+  grid-template-rows: 3;
+}
+.contactdetail {
+  font-size: smaller;
+}
+.contactImg {
+  width: 20px;
+  height: 20px;
+}
+/* רשתות חברתיות */
+.social-menu {
+  background-color: none;
+}
+.social-menu ul {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.social-menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.social-menu ul li .fa {
+  color: #000000;
+  font-size: 25px;
+  line-height: 50px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.social-menu ul li .fa:hover {
+  color: #ffffff;
+}
+.social-menu ul li a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translate(0, 0px);
+  -ms-transform: translate(0, 0px);
+  transform: translate(0, 0px);
+  -webkit-box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+  -webkit-transform: rotate(0deg) skew(0deg) translate(0, -10px);
+  -ms-transform: rotate(0deg) skew(0deg) translate(0, -10px);
+  transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+  background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+  background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+  background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+  background-color: #cd201f;
+}
+.social-menu ul li:nth-child(5) a:hover {
+  background-color: #0077b5;
+}

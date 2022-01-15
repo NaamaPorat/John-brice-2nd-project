@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="shortcut icon" href="Utilities/pig-512.ico" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piggy Bank</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Alfa Slab One"
+      rel="stylesheet"
+    />
+    <!-- Jquery & Bootstrap -->
+    <script src="jquery-3.6.0.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- canvas -->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- toggle -->
+    <link
+      href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <!-- Jquery ui -->
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <div id="titleDiv">
+      <h1>The Piggy Bank</h1>
+      <img src="Utilities/output-onlinepngtools.png" alt="" />
+    </div>
+
+    <!-- Header -->
+    <div id="headerDiv" class="col-12">
+      <nav class="col-12 col-sm-7 col-lg-4">
+        <button id="homeBtn" class="btn btn-outline-danger headerButton navBtn">
+          Home
+        </button>
+        <button
+          id="liveReportBtn"
+          class="btn btn-outline-danger headerButton navBtn"
+        >
+          Live Reports
+        </button>
+        <button
+          id="aboutBtn"
+          class="btn btn-outline-danger headerButton navBtn"
+        >
+          About
+        </button>
+      </nav>
+      <div id="toggledCoins" class="d-none d-lg-block col-lg-4"></div>
+      <div class="col-12 col-sm-4 col-lg-4 search searchDiv">
+        <div id="searchInputDiv" class="input-group">
+          <input
+            placeholder="Symbol of coin"
+            class="form-control d-inline-block"
+            type="text"
+            name="searchInput"
+            id="searchInput"
+            pattern="[A-Za-z0-9]"
+            required
+            minlength="1"
+            title="Use letters and numbers only"
+          />
+          <div class="input-group-append">
+            <button
+              id="searchButton"
+              type="button"
+              class="btn btn-danger d-inline-block headerButton"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="clearBtnDiv" class="d-12 d-sm-9 col-md-6 col-lg-3 container">
+      <button id="clearBtn" type="button" class="col-12 btn btn-danger btn-sm">
+        Clear toggled choices
+      </button>
+    </div>
+    <!-- Main -->
+    <div id="upperDiv" class="col-12">
+      <img id="throbber" class="throbber" src="Utilities/giphy.gif" />
+    </div>
+    <br />
+
+    <div id="mainContainer" class="col-12">
+      <div id="cardDeck" class="col-12"></div>
+      <div id="aboutDiv" class="col-12"></div>
+      <div
+        id="chartContainer"
+        class="col-12 chart"
+        style="height: 80%; max-width: 85%; margin: 0px auto"
+      ></div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="col-12 modal fade"
+      id="modalDiv"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered col-12" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">
+              You can only pick up to 5. Discard one.
+            </h5>
+          </div>
+          <div id="toggleModal" class="modal-body d-flex flex-column">
+            gnsne
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Massage modal -->
+    <div
+      class="col-12 modal fade"
+      id="massageModalDiv"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered col-12" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="massageModalTitle">
+              You can only pick up to 5. Discard one.
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
